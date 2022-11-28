@@ -25,9 +25,13 @@ const images = [
 let markup = "";
 
 for (const { url, alt } of images) {
-  markup += `<li><img src="${url}" alt="${alt}"></li>`;
+  markup += `<li><img src="${url}" alt="${alt}" style="width: 30vw; height: auto;"></li>`;
 }
 
 const list = document.querySelector(".gallery");
+
+list.style.listStyle = "none";
+list.style.display = "flex";
+list.style.gap = "20px";
 
 list.insertAdjacentHTML("afterbegin", markup);
